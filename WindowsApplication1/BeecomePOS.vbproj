@@ -1,0 +1,1960 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{C555D61E-DCE5-4F18-B699-D3FF1269E490}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>BeecomePOS.My.MyApplication</StartupObject>
+    <RootNamespace>BeecomePOS</RootNamespace>
+    <AssemblyName>BeecomePOS</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>WindowsForms</MyType>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>BeecomePOS.xml</DocumentationFile>
+    <NoWarn>41999,42016,42017,42018,42019,42020,42021,42022,42032,42036</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>BeecomePOS.xml</DocumentationFile>
+    <NoWarn>41999,42016,42017,42018,42019,42020,42021,42022,42032,42036</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>icon_newpos.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>My Project\app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Accessibility">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="ccltsvc, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>.\ccltsvc.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Release\CrystalDecisions.CrystalReports.Engine.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Release\CrystalDecisions.ReportSource.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Release\CrystalDecisions.Shared.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="FlashControlV71, Version=1.0.3187.32366, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>bin\Release\Microsoft.Office.Interop.Excel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.VisualBasic.PowerPacks.Vs, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="MySql.Data, Version=6.5.7.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.ServiceProcess" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="ccltsvc" />
+    <Import Include="CrystalDecisions.CrystalReports" />
+    <Import Include="CrystalDecisions.CrystalReports.Engine" />
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AccountNameKeyPair.vb" />
+    <Compile Include="Admin_addCatPrd.Designer.vb">
+      <DependentUpon>Admin_addCatPrd.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Admin_addCatPrd.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin_addPrdCon.Designer.vb">
+      <DependentUpon>Admin_addPrdCon.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Admin_addPrdCon.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin_addPrdList_Preview.Designer.vb">
+      <DependentUpon>Admin_addPrdList_Preview.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Admin_addPrdList_Preview.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin_addPrd_unit.Designer.vb">
+      <DependentUpon>Admin_addPrd_unit.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Admin_addPrd_unit.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin_configCalPay.Designer.vb">
+      <DependentUpon>Admin_configCalPay.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Admin_configCalPay.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin_ConfigCloseDay.Designer.vb">
+      <DependentUpon>Admin_ConfigCloseDay.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Admin_ConfigCloseDay.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin_ConfigFormcomment.Designer.vb">
+      <DependentUpon>Admin_ConfigFormcomment.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Admin_ConfigFormcomment.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin_ConfigNumRuning.Designer.vb">
+      <DependentUpon>Admin_ConfigNumRuning.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Admin_ConfigNumRuning.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin_Configpayment.Designer.vb">
+      <DependentUpon>Admin_Configpayment.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Admin_Configpayment.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin_Configpaymentdialog2.Designer.vb">
+      <DependentUpon>Admin_Configpaymentdialog2.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Admin_Configpaymentdialog2.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin_Configpaymentdialog3.Designer.vb">
+      <DependentUpon>Admin_Configpaymentdialog3.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Admin_Configpaymentdialog3.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin_Configpaymentdialog_oc.Designer.vb">
+      <DependentUpon>Admin_Configpaymentdialog_oc.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Admin_Configpaymentdialog_oc.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin_Configpaymentdialog_oc_plus.Designer.vb">
+      <DependentUpon>Admin_Configpaymentdialog_oc_plus.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Admin_Configpaymentdialog_oc_plus.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin_ConfigpaymentSet.Designer.vb">
+      <DependentUpon>Admin_ConfigpaymentSet.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Admin_ConfigpaymentSet.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin_Configpayment_dialog.Designer.vb">
+      <DependentUpon>Admin_Configpayment_dialog.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Admin_Configpayment_dialog.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin_ConfigPrint.Designer.vb">
+      <DependentUpon>Admin_ConfigPrint.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Admin_ConfigPrint.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin_ConfigSettingFD.Designer.vb">
+      <DependentUpon>Admin_ConfigSettingFD.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Admin_ConfigSettingFD.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin_configSystem.Designer.vb">
+      <DependentUpon>Admin_configSystem.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Admin_configSystem.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin_ConfigTB.Designer.vb">
+      <DependentUpon>Admin_ConfigTB.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Admin_ConfigTB.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin_ConfigTBColor.Designer.vb">
+      <DependentUpon>Admin_ConfigTBColor.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Admin_ConfigTBColor.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin_ConfigTBCUS.Designer.vb">
+      <DependentUpon>Admin_ConfigTBCUS.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Admin_ConfigTBCUS.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin_ConfigTBCus_AddLocation.Designer.vb">
+      <DependentUpon>Admin_ConfigTBCus_AddLocation.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Admin_ConfigTBCus_AddLocation.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin_ConfigTBCus_OnOff.Designer.vb">
+      <DependentUpon>Admin_ConfigTBCus_OnOff.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Admin_ConfigTBCus_OnOff.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin_ConfigTBONOFF.Designer.vb">
+      <DependentUpon>Admin_ConfigTBONOFF.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Admin_ConfigTBONOFF.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin_ConfigUnitPrd.Designer.vb">
+      <DependentUpon>Admin_ConfigUnitPrd.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Admin_ConfigUnitPrd.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin_EditBill.Designer.vb">
+      <DependentUpon>Admin_EditBill.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Admin_EditBill.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin_EditInventory.Designer.vb">
+      <DependentUpon>Admin_EditInventory.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Admin_EditInventory.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin_EditInventory_Unit.Designer.vb">
+      <DependentUpon>Admin_EditInventory_Unit.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Admin_EditInventory_Unit.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin_editPrd.Designer.vb">
+      <DependentUpon>Admin_editPrd.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Admin_editPrd.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin_forgetPwd.Designer.vb">
+      <DependentUpon>Admin_forgetPwd.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Admin_forgetPwd.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin_Report.Designer.vb">
+      <DependentUpon>Admin_Report.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Admin_Report.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin_ReportInputParameter2.Designer.vb">
+      <DependentUpon>Admin_ReportInputParameter2.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Admin_ReportInputParameter2.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin_ReportInputParameter3.Designer.vb">
+      <DependentUpon>Admin_ReportInputParameter3.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Admin_ReportInputParameter3.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin_Report_InputParameter1.Designer.vb">
+      <DependentUpon>Admin_Report_InputParameter1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Admin_Report_InputParameter1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin_ViewPrdAll.Designer.vb">
+      <DependentUpon>Admin_ViewPrdAll.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Admin_ViewPrdAll.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin_ClassMain.vb" />
+    <Compile Include="ClsCapture.vb" />
+    <Compile Include="Admin_index.Designer.vb">
+      <DependentUpon>Admin_index.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Admin_index.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin_ProfileShop.Designer.vb">
+      <DependentUpon>Admin_ProfileShop.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Admin_ProfileShop.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ConfirmDialog.Designer.vb">
+      <DependentUpon>ConfirmDialog.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ConfirmDialog.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="confirm_void.Designer.vb">
+      <DependentUpon>confirm_void.vb</DependentUpon>
+    </Compile>
+    <Compile Include="confirm_void.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="dialog_complete.Designer.vb">
+      <DependentUpon>dialog_complete.vb</DependentUpon>
+    </Compile>
+    <Compile Include="dialog_complete.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="dialog_confirm.Designer.vb">
+      <DependentUpon>dialog_confirm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="dialog_confirm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="dialog_size.Designer.vb">
+      <DependentUpon>dialog_size.vb</DependentUpon>
+    </Compile>
+    <Compile Include="dialog_size.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin_ConfigTBCUS_Detail.Designer.vb">
+      <DependentUpon>Admin_ConfigTBCUS_Detail.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Admin_ConfigTBCUS_Detail.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin_addUser.Designer.vb">
+      <DependentUpon>Admin_addUser.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Admin_addUser.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin_addPrdList.Designer.vb">
+      <DependentUpon>Admin_addPrdList.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Admin_addPrdList.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin_addPrd.Designer.vb">
+      <DependentUpon>Admin_addPrd.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Admin_addPrd.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin_addPrd_Condit.Designer.vb">
+      <DependentUpon>Admin_addPrd_Condit.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Admin_addPrd_Condit.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin.Designer.vb">
+      <DependentUpon>Admin.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Admin.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Export.Designer.vb">
+      <DependentUpon>Export.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Export.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin_ReportInputParameter4.Designer.vb">
+      <DependentUpon>Admin_ReportInputParameter4.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Admin_ReportInputParameter4.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="form_reprint_captain.Designer.vb">
+      <DependentUpon>form_reprint_captain.vb</DependentUpon>
+    </Compile>
+    <Compile Include="form_reprint_captain.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="form_reprint_captain_gh.Designer.vb">
+      <DependentUpon>form_reprint_captain_gh.vb</DependentUpon>
+    </Compile>
+    <Compile Include="form_reprint_captain_gh.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="form_ropbill_audit_close.Designer.vb">
+      <DependentUpon>form_ropbill_audit_close.vb</DependentUpon>
+    </Compile>
+    <Compile Include="form_ropbill_audit_close.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="form_ropbill_audit_default.Designer.vb">
+      <DependentUpon>form_ropbill_audit_default.vb</DependentUpon>
+    </Compile>
+    <Compile Include="form_ropbill_audit_default.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="form_ropbill_close.Designer.vb">
+      <DependentUpon>form_ropbill_close.vb</DependentUpon>
+    </Compile>
+    <Compile Include="form_ropbill_close.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="form_ropbill_default.Designer.vb">
+      <DependentUpon>form_ropbill_default.vb</DependentUpon>
+    </Compile>
+    <Compile Include="form_ropbill_default.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="form_ropbill_processbar.Designer.vb">
+      <DependentUpon>form_ropbill_processbar.vb</DependentUpon>
+    </Compile>
+    <Compile Include="form_ropbill_processbar.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="form_selectdate.Designer.vb">
+      <DependentUpon>form_selectdate.vb</DependentUpon>
+    </Compile>
+    <Compile Include="form_selectdate.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="form_switch_system.Designer.vb">
+      <DependentUpon>form_switch_system.vb</DependentUpon>
+    </Compile>
+    <Compile Include="form_switch_system.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="form_tax.Designer.vb">
+      <DependentUpon>form_tax.vb</DependentUpon>
+    </Compile>
+    <Compile Include="form_tax.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="form_voidbill.Designer.vb">
+      <DependentUpon>form_voidbill.vb</DependentUpon>
+    </Compile>
+    <Compile Include="form_voidbill.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="form_voidbill_reson.Designer.vb">
+      <DependentUpon>form_voidbill_reson.vb</DependentUpon>
+    </Compile>
+    <Compile Include="form_voidbill_reson.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="func.vb" />
+    <Compile Include="gohome_list_void_orderlist.Designer.vb">
+      <DependentUpon>gohome_list_void_orderlist.vb</DependentUpon>
+    </Compile>
+    <Compile Include="gohome_list_void_orderlist.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="home1_menu.Designer.vb">
+      <DependentUpon>home1_menu.vb</DependentUpon>
+    </Compile>
+    <Compile Include="home1_menu.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="home_cancel_order.Designer.vb">
+      <DependentUpon>home_cancel_order.vb</DependentUpon>
+    </Compile>
+    <Compile Include="home_cancel_order.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="inroom.Designer.vb">
+      <DependentUpon>inroom.vb</DependentUpon>
+    </Compile>
+    <Compile Include="inroom.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="keyborad_str.Designer.vb">
+      <DependentUpon>keyborad_str.vb</DependentUpon>
+    </Compile>
+    <Compile Include="keyborad_str.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MoveWindows.vb" />
+    <Compile Include="MysqlFront.vb" />
+    <Compile Include="MysqlTimer.vb" />
+    <Compile Include="opentable_add_other.Designer.vb">
+      <DependentUpon>opentable_add_other.vb</DependentUpon>
+    </Compile>
+    <Compile Include="opentable_add_other.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="form_ropbill.Designer.vb">
+      <DependentUpon>form_ropbill.vb</DependentUpon>
+    </Compile>
+    <Compile Include="form_ropbill.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="form_ropday.Designer.vb">
+      <DependentUpon>form_ropday.vb</DependentUpon>
+    </Compile>
+    <Compile Include="form_ropday.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="keyborad_number.Designer.vb">
+      <DependentUpon>keyborad_number.vb</DependentUpon>
+    </Compile>
+    <Compile Include="keyborad_number.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="opentable_addnumprd1.Designer.vb">
+      <DependentUpon>opentable_addnumprd1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="opentable_addnumprd1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="gohome_list.Designer.vb">
+      <DependentUpon>gohome_list.vb</DependentUpon>
+    </Compile>
+    <Compile Include="gohome_list.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="home1.Designer.vb">
+      <DependentUpon>home1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="home1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="index.Designer.vb">
+      <DependentUpon>index.vb</DependentUpon>
+    </Compile>
+    <Compile Include="index.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GetConnectHost.vb" />
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Mysql.vb" />
+    <Compile Include="opentable.Designer.vb">
+      <DependentUpon>opentable.vb</DependentUpon>
+    </Compile>
+    <Compile Include="opentable.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="opentable_jointb.Designer.vb">
+      <DependentUpon>opentable_jointb.vb</DependentUpon>
+    </Compile>
+    <Compile Include="opentable_jointb.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="opentable_movetb.Designer.vb">
+      <DependentUpon>opentable_movetb.vb</DependentUpon>
+    </Compile>
+    <Compile Include="opentable_movetb.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="opentable_prdother.Designer.vb">
+      <DependentUpon>opentable_prdother.vb</DependentUpon>
+    </Compile>
+    <Compile Include="opentable_prdother.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="opentable_viewlistall.Designer.vb">
+      <DependentUpon>opentable_viewlistall.vb</DependentUpon>
+    </Compile>
+    <Compile Include="opentable_viewlistall.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="opentable_voidorder1.Designer.vb">
+      <DependentUpon>opentable_voidorder1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="opentable_voidorder1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="opentakehome.Designer.vb">
+      <DependentUpon>opentakehome.vb</DependentUpon>
+    </Compile>
+    <Compile Include="opentakehome.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="payment.Designer.vb">
+      <DependentUpon>payment.vb</DependentUpon>
+    </Compile>
+    <Compile Include="payment.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Payment_DialogPrintVat.Designer.vb">
+      <DependentUpon>Payment_DialogPrintVat.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Payment_DialogPrintVat.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="payment_discount.Designer.vb">
+      <DependentUpon>payment_discount.vb</DependentUpon>
+    </Compile>
+    <Compile Include="payment_discount.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="payment_discount_gohome.Designer.vb">
+      <DependentUpon>payment_discount_gohome.vb</DependentUpon>
+    </Compile>
+    <Compile Include="payment_discount_gohome.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="payment_gohome.Designer.vb">
+      <DependentUpon>payment_gohome.vb</DependentUpon>
+    </Compile>
+    <Compile Include="payment_gohome.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="payment_gohome_subp_dialog.Designer.vb">
+      <DependentUpon>payment_gohome_subp_dialog.vb</DependentUpon>
+    </Compile>
+    <Compile Include="payment_gohome_subp_dialog.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="payment_inputbanktranfer.Designer.vb">
+      <DependentUpon>payment_inputbanktranfer.vb</DependentUpon>
+    </Compile>
+    <Compile Include="payment_inputbanktranfer.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="payment_inputtype.Designer.vb">
+      <DependentUpon>payment_inputtype.vb</DependentUpon>
+    </Compile>
+    <Compile Include="payment_inputtype.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="payment_oc.Designer.vb">
+      <DependentUpon>payment_oc.vb</DependentUpon>
+    </Compile>
+    <Compile Include="payment_oc.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="payment_subp_dialog.Designer.vb">
+      <DependentUpon>payment_subp_dialog.vb</DependentUpon>
+    </Compile>
+    <Compile Include="payment_subp_dialog.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="payment_type.Designer.vb">
+      <DependentUpon>payment_type.vb</DependentUpon>
+    </Compile>
+    <Compile Include="payment_type.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="planManageRoom.Designer.vb">
+      <DependentUpon>planManageRoom.vb</DependentUpon>
+    </Compile>
+    <Compile Include="planManageRoom.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="plan_add_text.Designer.vb">
+      <DependentUpon>plan_add_text.vb</DependentUpon>
+    </Compile>
+    <Compile Include="plan_add_text.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="printClass.vb" />
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Login.Designer.vb">
+      <DependentUpon>Login.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Login.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="process_bar.Designer.vb">
+      <DependentUpon>process_bar.vb</DependentUpon>
+    </Compile>
+    <Compile Include="process_bar.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="putLicense.Designer.vb">
+      <DependentUpon>putLicense.vb</DependentUpon>
+    </Compile>
+    <Compile Include="putLicense.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="reportviewer.Designer.vb">
+      <DependentUpon>reportviewer.vb</DependentUpon>
+    </Compile>
+    <Compile Include="reportviewer.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ResizeableControl.vb" />
+    <Compile Include="setting_host.Designer.vb">
+      <DependentUpon>setting_host.vb</DependentUpon>
+    </Compile>
+    <Compile Include="setting_host.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="showPay.Designer.vb">
+      <DependentUpon>showPay.vb</DependentUpon>
+    </Compile>
+    <Compile Include="showPay.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="showpay_alert.Designer.vb">
+      <DependentUpon>showpay_alert.vb</DependentUpon>
+    </Compile>
+    <Compile Include="showpay_alert.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="showPay_typeprint.Designer.vb">
+      <DependentUpon>showPay_typeprint.vb</DependentUpon>
+    </Compile>
+    <Compile Include="showPay_typeprint.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="stock_cut_prd.Designer.vb">
+      <DependentUpon>stock_cut_prd.vb</DependentUpon>
+    </Compile>
+    <Compile Include="stock_cut_prd.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="stock_form_previewprint.Designer.vb">
+      <DependentUpon>stock_form_previewprint.vb</DependentUpon>
+    </Compile>
+    <Compile Include="stock_form_previewprint.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="stock_index.Designer.vb">
+      <DependentUpon>stock_index.vb</DependentUpon>
+    </Compile>
+    <Compile Include="stock_index.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="stock_inventory.Designer.vb">
+      <DependentUpon>stock_inventory.vb</DependentUpon>
+    </Compile>
+    <Compile Include="stock_inventory.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="stock_recript.Designer.vb">
+      <DependentUpon>stock_recript.vb</DependentUpon>
+    </Compile>
+    <Compile Include="stock_recript.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="stock_recript_history.Designer.vb">
+      <DependentUpon>stock_recript_history.vb</DependentUpon>
+    </Compile>
+    <Compile Include="stock_recript_history.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="switch_langprint.Designer.vb">
+      <DependentUpon>switch_langprint.vb</DependentUpon>
+    </Compile>
+    <Compile Include="switch_langprint.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="testprint1.Designer.vb">
+      <DependentUpon>testprint1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="testprint1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="user_edit.Designer.vb">
+      <DependentUpon>user_edit.vb</DependentUpon>
+    </Compile>
+    <Compile Include="user_edit.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="voidReson.Designer.vb">
+      <DependentUpon>voidReson.vb</DependentUpon>
+    </Compile>
+    <Compile Include="voidReson.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="void_orderlist.Designer.vb">
+      <DependentUpon>void_orderlist.vb</DependentUpon>
+    </Compile>
+    <Compile Include="void_orderlist.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="worker.vb" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Admin_addCatPrd.resx">
+      <DependentUpon>Admin_addCatPrd.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin_addPrdCon.resx">
+      <DependentUpon>Admin_addPrdCon.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin_addPrdList_Preview.resx">
+      <DependentUpon>Admin_addPrdList_Preview.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin_addPrd_unit.resx">
+      <DependentUpon>Admin_addPrd_unit.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin_configCalPay.resx">
+      <DependentUpon>Admin_configCalPay.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin_ConfigCloseDay.resx">
+      <DependentUpon>Admin_ConfigCloseDay.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin_ConfigFormcomment.resx">
+      <DependentUpon>Admin_ConfigFormcomment.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin_ConfigNumRuning.resx">
+      <DependentUpon>Admin_ConfigNumRuning.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin_Configpayment.resx">
+      <DependentUpon>Admin_Configpayment.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin_Configpaymentdialog2.resx">
+      <DependentUpon>Admin_Configpaymentdialog2.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin_Configpaymentdialog3.resx">
+      <DependentUpon>Admin_Configpaymentdialog3.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin_Configpaymentdialog_oc.resx">
+      <DependentUpon>Admin_Configpaymentdialog_oc.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin_Configpaymentdialog_oc_plus.resx">
+      <DependentUpon>Admin_Configpaymentdialog_oc_plus.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin_ConfigpaymentSet.resx">
+      <DependentUpon>Admin_ConfigpaymentSet.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin_Configpayment_dialog.resx">
+      <DependentUpon>Admin_Configpayment_dialog.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin_ConfigPrint.resx">
+      <DependentUpon>Admin_ConfigPrint.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin_ConfigSettingFD.resx">
+      <DependentUpon>Admin_ConfigSettingFD.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin_configSystem.resx">
+      <DependentUpon>Admin_configSystem.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin_ConfigTB.resx">
+      <DependentUpon>Admin_ConfigTB.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin_ConfigTBColor.resx">
+      <DependentUpon>Admin_ConfigTBColor.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin_ConfigTBCUS.resx">
+      <DependentUpon>Admin_ConfigTBCUS.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin_ConfigTBCus_AddLocation.resx">
+      <DependentUpon>Admin_ConfigTBCus_AddLocation.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin_ConfigTBCus_OnOff.resx">
+      <DependentUpon>Admin_ConfigTBCus_OnOff.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin_ConfigTBONOFF.resx">
+      <DependentUpon>Admin_ConfigTBONOFF.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin_ConfigUnitPrd.resx">
+      <DependentUpon>Admin_ConfigUnitPrd.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin_EditBill.resx">
+      <DependentUpon>Admin_EditBill.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin_EditInventory.resx">
+      <DependentUpon>Admin_EditInventory.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin_EditInventory_Unit.resx">
+      <DependentUpon>Admin_EditInventory_Unit.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin_editPrd.resx">
+      <DependentUpon>Admin_editPrd.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin_forgetPwd.resx">
+      <DependentUpon>Admin_forgetPwd.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin_index.resx">
+      <DependentUpon>Admin_index.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin_Report.resx">
+      <DependentUpon>Admin_Report.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin_ReportInputParameter2.resx">
+      <DependentUpon>Admin_ReportInputParameter2.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin_ReportInputParameter3.resx">
+      <DependentUpon>Admin_ReportInputParameter3.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin_Report_InputParameter1.resx">
+      <DependentUpon>Admin_Report_InputParameter1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin_ViewPrdAll.resx">
+      <DependentUpon>Admin_ViewPrdAll.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin_ProfileShop.resx">
+      <DependentUpon>Admin_ProfileShop.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin_ConfigTBCUS_Detail.resx">
+      <DependentUpon>Admin_ConfigTBCUS_Detail.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin_addUser.resx">
+      <DependentUpon>Admin_addUser.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin_addPrdList.resx">
+      <DependentUpon>Admin_addPrdList.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin_addPrd.resx">
+      <DependentUpon>Admin_addPrd.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin_addPrd_Condit.resx">
+      <DependentUpon>Admin_addPrd_Condit.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ConfirmDialog.resx">
+      <DependentUpon>ConfirmDialog.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="confirm_void.resx">
+      <DependentUpon>confirm_void.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="dialog_complete.resx">
+      <DependentUpon>dialog_complete.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="dialog_confirm.resx">
+      <DependentUpon>dialog_confirm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="dialog_size.resx">
+      <DependentUpon>dialog_size.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin.resx">
+      <DependentUpon>Admin.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Export.resx">
+      <DependentUpon>Export.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin_ReportInputParameter4.resx">
+      <DependentUpon>Admin_ReportInputParameter4.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="form_reprint_captain.resx">
+      <DependentUpon>form_reprint_captain.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="form_reprint_captain_gh.resx">
+      <DependentUpon>form_reprint_captain_gh.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="form_ropbill_audit_close.resx">
+      <DependentUpon>form_ropbill_audit_close.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="form_ropbill_audit_default.resx">
+      <DependentUpon>form_ropbill_audit_default.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="form_ropbill_close.resx">
+      <DependentUpon>form_ropbill_close.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="form_ropbill_default.resx">
+      <DependentUpon>form_ropbill_default.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="form_ropbill_processbar.resx">
+      <DependentUpon>form_ropbill_processbar.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="form_selectdate.resx">
+      <DependentUpon>form_selectdate.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="form_switch_system.resx">
+      <DependentUpon>form_switch_system.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="form_tax.resx">
+      <DependentUpon>form_tax.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="form_voidbill.resx">
+      <DependentUpon>form_voidbill.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="form_voidbill_reson.resx">
+      <DependentUpon>form_voidbill_reson.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="gohome_list_void_orderlist.resx">
+      <DependentUpon>gohome_list_void_orderlist.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="home1_menu.resx">
+      <DependentUpon>home1_menu.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="home_cancel_order.resx">
+      <DependentUpon>home_cancel_order.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="inroom.resx">
+      <DependentUpon>inroom.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="keyborad_str.resx">
+      <DependentUpon>keyborad_str.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="opentable_add_other.resx">
+      <DependentUpon>opentable_add_other.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="form_ropbill.resx">
+      <DependentUpon>form_ropbill.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="form_ropday.resx">
+      <DependentUpon>form_ropday.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="keyborad_number.resx">
+      <DependentUpon>keyborad_number.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="opentable_addnumprd1.resx">
+      <DependentUpon>opentable_addnumprd1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="gohome_list.resx">
+      <DependentUpon>gohome_list.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="home1.resx">
+      <DependentUpon>home1.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="index.resx">
+      <DependentUpon>index.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="opentable.resx">
+      <DependentUpon>opentable.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="opentable_jointb.resx">
+      <DependentUpon>opentable_jointb.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="opentable_movetb.resx">
+      <DependentUpon>opentable_movetb.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="opentable_prdother.resx">
+      <DependentUpon>opentable_prdother.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="opentable_viewlistall.resx">
+      <DependentUpon>opentable_viewlistall.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="opentable_voidorder1.resx">
+      <DependentUpon>opentable_voidorder1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="opentakehome.resx">
+      <DependentUpon>opentakehome.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="payment.resx">
+      <DependentUpon>payment.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Payment_DialogPrintVat.resx">
+      <DependentUpon>Payment_DialogPrintVat.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="payment_discount.resx">
+      <DependentUpon>payment_discount.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="payment_discount_gohome.resx">
+      <DependentUpon>payment_discount_gohome.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="payment_gohome.resx">
+      <DependentUpon>payment_gohome.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="payment_gohome_subp_dialog.resx">
+      <DependentUpon>payment_gohome_subp_dialog.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="payment_inputbanktranfer.resx">
+      <DependentUpon>payment_inputbanktranfer.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="payment_inputtype.resx">
+      <DependentUpon>payment_inputtype.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="payment_oc.resx">
+      <DependentUpon>payment_oc.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="payment_subp_dialog.resx">
+      <DependentUpon>payment_subp_dialog.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="payment_type.resx">
+      <DependentUpon>payment_type.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="planManageRoom.resx">
+      <DependentUpon>planManageRoom.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="plan_add_text.resx">
+      <DependentUpon>plan_add_text.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>PublicVbMyResourcesResXFileCodeGenerator</Generator>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login.resx">
+      <DependentUpon>Login.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="process_bar.resx">
+      <DependentUpon>process_bar.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="putLicense.resx">
+      <DependentUpon>putLicense.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="reportviewer.resx">
+      <DependentUpon>reportviewer.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="setting_host.resx">
+      <DependentUpon>setting_host.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="showPay.resx">
+      <DependentUpon>showPay.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="showpay_alert.resx">
+      <DependentUpon>showpay_alert.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="showpay_typeprint.resx">
+      <DependentUpon>showPay_typeprint.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="stock_cut_prd.resx">
+      <DependentUpon>stock_cut_prd.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="stock_form_previewprint.resx">
+      <DependentUpon>stock_form_previewprint.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="stock_index.resx">
+      <DependentUpon>stock_index.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="stock_inventory.resx">
+      <DependentUpon>stock_inventory.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="stock_recript.resx">
+      <DependentUpon>stock_recript.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="stock_recript_history.resx">
+      <DependentUpon>stock_recript_history.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="switch_langprint.resx">
+      <DependentUpon>switch_langprint.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="testprint1.resx">
+      <DependentUpon>testprint1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="user_edit.resx">
+      <DependentUpon>user_edit.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="voidReson.resx">
+      <DependentUpon>voidReson.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="void_orderlist.resx">
+      <DependentUpon>void_orderlist.vb</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="ClassDiagram1.cd" />
+    <None Include="ClassDiagram2.cd" />
+    <None Include="ClassDiagram3.cd" />
+    <None Include="My Project\app.manifest" />
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\plus_48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\plus_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\clipboard_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\gear_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\diagram_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\document_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\address_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\key_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\flag_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\flag_16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tick_16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\search_16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\delete_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\left_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pencil_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\stop_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\calendar_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\label_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\arrow_right.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\arrow_right1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Trend Down.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Trend Up.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Computer-Add.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Flag-Blue.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\print_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\clipboard_16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\plus_16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\trash_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\save_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\save_16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Add.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\delete_16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\leftred_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\leftred_321.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pencil_16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\delete_161.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\trash_16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\search_161.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Compile.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Wizard.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cart-Add.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Datbase-Add.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Doc.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\trash_161.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Doc-Edit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Doc-Del.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Trash.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\home_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\gear_321.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\clipboard_321.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\buy_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\food1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\food11.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tb1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tb11.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tb2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tb21.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\food12.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Datbase-Lock.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Favorite.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Forbidden.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Ok.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Forbidden1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cart-Add1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Flag-Cyan.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Tag-Blue.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tb22.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pencil_321.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Left.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\del16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\User.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\User-Edit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\User-Del.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\News-Add.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\News-Edit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Printer.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Tag-Red.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Compile1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bg_left.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bgTabMenu.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btn_walking.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btn_reserv.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btn_logout.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\food13.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\search_162.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bread1_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\breads_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cake_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\blue_coffee_2_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\coffee_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cookies_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\food_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\french_fries_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hot_dog_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\milkshake_chocolate_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pizza_slice_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sliced_bread_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\soft_drink_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sup_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\wine_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\arrow_right2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\delete_321.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\arrow-180.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\arrow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\minus.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\plus.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\arrow-090.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\arrow-270.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\arrow-0901.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\minus1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\plus1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\printer1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\arrow1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\plus2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\application.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btn_pay.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bread1_321.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\arrow-curve-180.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btn_view.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\prohibition.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\arrow-circle.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\arrow-circle-double-135.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\gear.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\News-Del.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bg_blue.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bg_pink.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bg_blue_new.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\User %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Home.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\th.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\English-Flag.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\English-Flag %281%29.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\flag-uk.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\flag-uk1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Key.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Web-info.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Info.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\blue-with-silver-frame.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bg_panal3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bg_panal31.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\login_new_button_zpse5e3fd1f.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\login_new_button_zpse5e3fd1f1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btn_reset.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\FreeVector-Blue-Squares-Vector.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bgCenter.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bg_left1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\disk.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cross.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\arrow-curve-1801.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\arrow-curve.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bg_pic.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\title_bar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\menu_bar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\m_reserv.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\m_opentb.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\m_opentb1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\m_opentb2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\m_walking.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\m_report.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\m_closerop.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\m_logout.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\m_mini.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\m_maxsize.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\m_close.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\title_bar_bg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logo_menu.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\menu_bar_bg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\menu_right.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\menu_bar1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\login_bg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\login_bg1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\login_bg11.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logo_bg1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logo_bg11.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bg_menu_bar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bg_menu_bar1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bg_menu_bar11.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btn_plus.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btn_opn.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btn_res.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bg_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bg_3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bg_2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bg_4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bg_5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bg_51.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btn_up.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btn_drow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btn_ok.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btn_backH.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btn_sel.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btn_sendorder.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btn_trybill.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btn_hold.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btn_minus1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btn_plus1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bg_33.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btn_addorder.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btn_reload.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btn_sel1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btn_backP.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="CrystalPrintControlLib">
+      <Guid>{E13DA09A-8E66-4F69-8F97-EF3A270CB2F4}</Guid>
+      <VersionMajor>12</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="stdole">
+      <Guid>{00020430-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0,Profile=Client">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 Client Profile %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\monitor.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hm.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hm1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hm2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tb23.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\p2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\p1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1412607468_resultset_first.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1412607468_resultset_first1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\baht_salary-512.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\currency-collection-019.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\5bath.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\invoice_send.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\invoice_send1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon-payment2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pos-icon5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logo_new.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="ccltsvc.dll" />
+    <Content Include="favicon.ico" />
+    <Content Include="icon_newpos.ico" />
+    <None Include="Resources\discounts-icon.png" />
+    <None Include="Resources\left_.png" />
+    <None Include="Resources\right_.png" />
+    <None Include="Resources\right_all.png" />
+    <None Include="Resources\left_all.png" />
+    <None Include="Resources\question-mark.png" />
+    <None Include="Resources\inven45.png" />
+    <None Include="Resources\inven.png" />
+    <None Include="Resources\print32.png" />
+    <None Include="Resources\pre_print.png" />
+    <None Include="Resources\reserv1.png" />
+    <None Include="Resources\tankehome1.png" />
+    <None Include="Resources\viewbill1.png" />
+    <None Include="Resources\total-user11.png" />
+    <None Include="Resources\total-user1.png" />
+    <None Include="Resources\edit_user1.png" />
+    <None Include="Resources\iphoto.png" />
+    <None Include="Resources\file-complete-icon.png" />
+    <None Include="Resources\256px-Icon-information.svg.png" />
+    <None Include="Resources\bg_new.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
